@@ -38,6 +38,8 @@ axios.interceptors.response.use(
                 });
             }else if(error.response.status == 404){
                 Message.error('请求资源不存在')
+            }else{
+                Message.error(error.response.request.response)
             }
         }if(!error.response){
             Message.error('请求失败');
@@ -118,5 +120,21 @@ export function put(url,data = {}){
             },err => {
                 reject(err)
             })
+    })
+}
+
+/**
+ * 封装delete请求
+ * @param {*} url 
+ * @param {*} data 
+ */
+export function del(url, data={}){
+    return new Promise((resolve,reject) => {
+        axios.delete(url, data)
+        .then(response => {
+            resolve(response.data);
+        }),err => {
+            reject(err)
+        }
     })
 }

@@ -139,6 +139,31 @@
                         "parent": 22
                     },
                     {
+                        "id": 100,
+                        "menu_name": "角色管理",
+                        "menu_href": "menu_management",
+                        "menu_icon": "",
+                        "tree_sort": 130,
+                        "tree_level": 2,
+                        "is_show": 1,
+                        "status": 0,
+                        "remarks": "",
+                        "parent": 22
+                    },
+                    {
+                        "id": 101,
+                        "menu_name": "菜单管理",
+                        "menu_href": "menu_management",
+                        "menu_icon": "",
+                        "tree_sort": 140,
+                        "tree_level": 2,
+                        "is_show": 1,
+                        "status": 0,
+                        "remarks": "",
+                        "parent": 22
+                    },
+                    
+                    {
                         "id": 24,
                         "menu_name": "角色权限",
                         "menu_href": "menu_management",

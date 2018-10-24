@@ -27,8 +27,8 @@
         data: function(){
             return {
                 ruleForm: {
-                    username: 'cjh',
-                    password: 'chengjunhui'
+                    username: '',
+                    password: ''
                 },
                 rules: {
                     username: [
@@ -49,10 +49,7 @@
                 this.$refs[formName].validate( async(valid) => {
                     if (valid) {
 
-                        let res = await vm.$post(vm.$path+'login/',{
-                            username:"cjh",
-                            password:"chenjunhui"
-                        });
+                        let res = await vm.$post(vm.$path+'login/',vm.ruleForm);
                         console.log(res);
                         if(res.user){
                             localStorage.setItem('token',res.user.token);

@@ -8,13 +8,14 @@ import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
 import '../static/css/icon.css';
 import "babel-polyfill";
 
-import {post,fetch,patch,put} from './api/http'
+import {post,fetch,patch,put,del} from './api/http'
 //定义全局变量
 Vue.prototype.$post=post;
 Vue.prototype.$fetch=fetch;
 Vue.prototype.$patch=patch;
 Vue.prototype.$put=put;
-Vue.prototype.$path="http://172.30.244.10:8000/";
+Vue.prototype.$del=del;
+Vue.prototype.$path="http://127.0.0.1:8000/";
 Vue.use(ElementUI, { size: 'small' });
 //Vue.prototype.$axios = axios;
 
